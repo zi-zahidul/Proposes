@@ -18,12 +18,12 @@
         #button-yes {
             position: fixed;
             top: 80%;
-            left: 60%;
+            left: 71%;
             transform: translate(-50%, -50%);
         }
         #button-no {
             position: absolute;
-            left: 39%;
+            left: 32%;
             top: 78%;
         }
     </style>
@@ -40,10 +40,10 @@
         let leftPosition = 20;
 
         buttonNo.addEventListener('mouseover', function() {
-            if (leftPosition === 40) {
+            if (leftPosition === 30) {
                 leftPosition = 44;
             } else {
-                leftPosition = 40;
+                leftPosition = 30;
             }
             this.style.left = leftPosition + '%';
         });
