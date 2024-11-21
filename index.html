@@ -3,58 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>𝗣𝗿𝗼𝗽𝗼𝘀𝗲𝘀</title>
+    <title>Proposal</title>
     <style>
-    p {
-    text-align: center;
-    font-size: 52px;
-    font-family: Candara, Oswald;
-    }
-    img {
-    display: block;
-    margin: 0 auto;
-    width: 25%;
-    }
+        p {
+            text-align: center;
+            font-size: 52px;
+            font-family: Candara, Oswald, sans-serif;
+        }
+        img {
+            display: block;
+            margin: 0 auto;
+            width: 25%;
+        }
+        #button-yes {
+            position: fixed;
+            top: 70%;
+            left: 60%;
+            transform: translate(-50%, -50%);
+        }
+        #button-no {
+            position: absolute;
+            left: 39%;
+            top: 68%;
+        }
     </style>
-    </head>
-    <body>
+</head>
+<body>
     <p>𝘆𝗼𝘂 𝘄𝗶𝗹𝗹 𝗺𝗮𝗿𝗿𝘆 𝗺𝗲!</p>
-    <img src="https://europe1.discourse-cdn.com/figma/original/3X/7/1/7105e9c010b3d1f0ea893ed5ca3bd58e6cec090e.gif">
-    </body>
-    <title>Botões</title>
-    <style>
-    #botao1 {
-    position: fixed;
-    top: 70%;
-    left: 60%;
-    transform: translate(-50%, -50%);
-    }
-    #botao2 {
-    position: absolute;
-     left: 39%;
-      top: 68%;
-    }
-    </style>
-    </head>
-    <body>
-    <button id="botao1">𝘆𝗲𝗮𝗵 💕</button>
-    <button id="botao2">𝘀𝗼𝗿𝗿𝘆</button>
-    <script>
-    const button2 = document.getElementById('botao2');
-    let left = 20;
-    button2.addEventListener('mouseover', function() {
-      if(left == 40){
-        left = 44;
-      }else{
-        left = 40;
-      }
-      this.style.left = left + '%';
-    });
+    <img src="https://europe1.discourse-cdn.com/figma/original/3X/7/1/7105e9c010b3d1f0ea893ed5ca3bd58e6cec090e.gif" alt="Proposal animation">
     
+    <button id="button-yes">𝘆𝗲𝗮𝗵 💕</button>
+    <button id="button-no">𝘀𝗼𝗿𝗿𝘆</button>
+
+    <script>
+        const buttonNo = document.getElementById('button-no');
+        let leftPosition = 20;
+
+        buttonNo.addEventListener('mouseover', function() {
+            if (leftPosition === 40) {
+                leftPosition = 44;
+            } else {
+                leftPosition = 40;
+            }
+            this.style.left = leftPosition + '%';
+        });
+
+        document.getElementById('button-yes').addEventListener('click', function() {
+            alert('𝗿𝗲𝗮𝗹𝗹𝘆 𝘀𝗼𝗿𝗿𝘆! 𝗶 𝗵𝗮𝘁𝗲 𝘆𝗼𝘂 🤬');
+        });
     </script>
-    <script>document.getElementById('botao1').addEventListener('click', function() {
-    alert('𝗿𝗲𝗮𝗹𝗹𝘆 𝘀𝗼𝗿𝗿𝘆! 𝗶 𝗵𝗮𝘁𝗲 𝘆𝗼𝘂 🤬');
-    });
-    </script>
-    </body>
-    </html>    
+</body>
+</html>
